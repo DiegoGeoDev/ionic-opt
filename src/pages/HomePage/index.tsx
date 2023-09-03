@@ -28,7 +28,7 @@ const HomePage: React.FC = () => {
         <IonContent fullscreen>
           <IonHeader collapse="condense">
             <IonToolbar>
-              <IonTitle size="large">OPT</IonTitle>
+              <IonTitle size="large">Home</IonTitle>
             </IonToolbar>
           </IonHeader>
           <ExploreContainer />
