@@ -36,6 +36,9 @@ const Menu: React.FC = () => {
           <IonItem routerLink="/modal-b" onClick={closeMenu}>
             <IonLabel>Modal B</IonLabel>
           </IonItem>
+          <IonItem routerLink="/map" onClick={closeMenu}>
+            <IonLabel>Map</IonLabel>
+          </IonItem>
         </IonList>
       </IonContent>
     </IonMenu>

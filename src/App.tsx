@@ -5,6 +5,9 @@ import { IonReactRouter } from "@ionic/react-router";
 import HomePage from "./pages/HomePage";
 import ModalAPage from "./pages/ModalAPage";
 import ModalBPage from "./pages/ModalBPage";
+import { MapPage } from "./pages/MapPage";
+
+import { ContextProviders } from "./components/ContextProviders";
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -29,18 +32,21 @@ setupIonicReact();
 
 const App: React.FC = () => {
   return (
-    <IonApp>
-      <IonReactRouter>
-        <IonRouterOutlet>
-          <Route exact path="/home" component={HomePage} />
-          <Route exact path="/modal-a" component={ModalAPage} />
-          <Route exact path="/modal-b" component={ModalBPage} />
-          <Route exact path="/">
-            <Redirect to="/home" />
-          </Route>
-        </IonRouterOutlet>
-      </IonReactRouter>
-    </IonApp>
+    <ContextProviders>
+      <IonApp>
+        <IonReactRouter>
+          <IonRouterOutlet>
+            <Route exact path="/home" component={HomePage} />
+            <Route exact path="/modal-a" component={ModalAPage} />
+            <Route exact path="/modal-b" component={ModalBPage} />
+            <Route exact path="/map" component={MapPage} />
+            <Route exact path="/">
+              <Redirect to="/home" />
+            </Route>
+          </IonRouterOutlet>
+        </IonReactRouter>
+      </IonApp>
+    </ContextProviders>
   );
 };
 
